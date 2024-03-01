@@ -1,0 +1,81 @@
+{
+  "id": "dc136a8f-f27c-4402-8302-6b3027e7d1fd",
+  "version": "2.0",
+  "name": "arxiv",
+  "url": "https://arxiv.org/",
+  "tests": [{
+    "id": "4a5a94d2-7e97-40c2-a853-25c6b8a3f006",
+    "name": "download",
+    "commands": [{
+      "id": "adbe3e13-d801-44d7-b3f7-75ff561f04e8",
+      "comment": "",
+      "command": "open",
+      "target": "https://arxiv.org/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67027fe5-1a49-4913-b60c-b5f5a570fcf9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "928x672",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87df7e05-81fc-43c7-a7df-717cbecc62fa",
+      "comment": "",
+      "command": "click",
+      "target": "id=cs.CL",
+      "targets": [
+        ["id=cs.AI", "id"],
+        ["linkText=Artificial Intelligence", "linkText"],
+        ["css=#cs\\.AI", "css:finder"],
+        ["xpath=//a[contains(text(),'Artificial Intelligence')]", "xpath:link"],
+        ["xpath=//a[@id='cs.AI']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/ul[3]/li/a[6]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/list/cs.AI/recent')]", "xpath:href"],
+        ["xpath=//ul[3]/li/a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'Artificial Intelligence')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d5e55b6-7cd7-4239-909f-075f2dbc24f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=dt:nth-child(1) > .list-identifier > a:nth-child(1)",
+      "targets": [
+        ["linkText=arXiv:2402.19450", "linkText"],
+        ["css=dt:nth-child(1) > .list-identifier > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'arXiv:2402.19450')]", "xpath:link"],
+        ["xpath=//div[@id='dlpage']/dl/dt/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/abs/2402.19450')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'arXiv:2402.19450')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3092d1e-9152-4d7e-9363-3be039265d6f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Download PDF",
+      "targets": [
+        ["linkText=Download PDF", "linkText"],
+        ["css=.download-pdf", "css:finder"],
+        ["xpath=(//a[contains(text(),'Download PDF')])[2]", "xpath:link"],
+        ["xpath=//div[@id='abs-outer']/div[2]/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/pdf/2402.19450.pdf')])[2]", "xpath:href"],
+        ["xpath=//div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "019f420b-b5f1-42f2-9084-406c74282f7a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4a5a94d2-7e97-40c2-a853-25c6b8a3f006"]
+  }],
+  "urls": ["https://arxiv.org/"],
+  "plugins": []
+}
